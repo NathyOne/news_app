@@ -46,7 +46,7 @@ const NewsList = () => {
             (typeof error === 'string' ? error : 'Failed to load news. Please check if the backend server is running.')
           }
           <br />
-          <small>If this persists, make sure the backend server is running at http://localhost:8000 and the database is set up.</small>
+          <small>error connecting to the news api provider.</small>
         </div>
       )}
 
