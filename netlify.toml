@@ -1,6 +1,6 @@
 [build]
   base = "frontend"
-  command = "npm install && npm run build"
+  command = "npm ci && npm run build"
   publish = "build"
 
 [[redirects]]
@@ -10,5 +10,6 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  REACT_APP_API_URL = "https://news-app-mba8.onrender.com/api"
 
 
