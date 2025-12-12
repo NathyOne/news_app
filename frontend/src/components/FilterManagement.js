@@ -8,7 +8,6 @@ import {
   applyFilter,
   clearFilteredNews,
 } from '../store/slices/filtersSlice';
-import NewsList from './NewsList';
 
 const FilterManagement = () => {
   const dispatch = useDispatch();
