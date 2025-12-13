@@ -79,15 +79,15 @@ if 'DATABASE_URL' in os.environ:
     }
 else:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': config('DB_NAME', default='news_alert_db'),
-            'USER': config('DB_USER', default='root'),
-            'PASSWORD': config('DB_PASSWORD', default=''),
-            'HOST': config('DB_HOST', default='localhost'),
-            'PORT': config('DB_PORT', default='3306'),
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',  
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT', 5432),
     }
+}
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -135,6 +135,7 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    'https://newsapp-alert.netlify.app/'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
